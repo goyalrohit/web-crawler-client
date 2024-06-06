@@ -4,37 +4,7 @@ This is a Java-based client application that interacts with a web crawler servic
 
 # Sequence Diagram : 
 
-Client                  WebCrawlerService                  WebCrawler
-  |                             |                              |
-  | Open an HTTP Connection     |                              |
-  |------------------------------>                             |
-  |                             |                              |
-  | Request Crawl               |                              |
-  |------------------------------>                             |
-  |                             | Create WebCrawler Instance   |
-  |                             |------------------------------>
-  |                             |                              |
-  |                             | Start Crawling               |
-  |                             |<------------------------------>
-  |                             |                              |
-  |                             | Fetch Data                   |
-  |                             |<------------------------------>
-  |                             |                              |
-  | Active MQ Data Transfer     |                              |
-  |<-------------------------------                             |
-  |                             |                              |
-  |                             | Fetch Data                   |
-  |                             |<------------------------------>
-  |                             |                              |
-  | Active MQ Data Transfer     |                              |
-  |<-------------------------------                             |
-  |                             |                              |
-  |                             | Stop Crawling                |
-  |                             |<------------------------------>
-  |                             |                              |
-  | Close HTTP  Connection      |                              |
-  |<-------------------------------                            |
-  |                             |                              |
+Client      --->            WebCrawlerService        ---->          Requested Website
 
 ![image](https://github.com/goyalrohit/web-crawler-client/assets/4389889/34370c68-d8a6-435f-b788-e500670e4a72)
 
@@ -101,6 +71,12 @@ mvn spring-boot:run
 4. For example: Hit the URL in Postman or any webBrowser - http://localhost:8082/sitemap?url=http://www.redhat.com
 
 5. The client will receive the message, trigger the sitemap generation process, and create a sitemap file for the specified website.
+6. SiteMap is printed as follows
+   
+  URL- https://access.redhat.com/products/red-hat-openshift-container-platform
+  -access.redhat.com
+    -products
+      -red-hat-openshift-container-platform
 
 ## Contributing
 
