@@ -11,9 +11,6 @@ activemq:
   broker-url: tcp://localhost:61616
   user: admin
   password: admin
-  params:
-    trustStorePassword: password
-    keyStorePassword: password
   destination:
     subscriber:
       crawler: crawlertopic

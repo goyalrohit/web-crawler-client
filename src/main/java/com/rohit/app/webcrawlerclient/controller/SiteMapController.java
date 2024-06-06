@@ -17,7 +17,7 @@ public class SiteMapController {
     @Value("${app.crawlerServerUrl}")
     private String crawlerServerUrl ;
 
-    private final static String RESP = "Sitemap Requested Succesfully. Please check Command Line for Sitemap";
+    private final static String RESP = "Sitemap Requested Succesfully. Please check Client CLI for Detailed Sitemap";
 
     @GetMapping("/sitemap")
     public String getsiteMap(@RequestParam String url) {

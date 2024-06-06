@@ -1,4 +1,4 @@
-package com.rohit.app.web_crawler_client;
+package com.rohit.app.webcrawlerclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
