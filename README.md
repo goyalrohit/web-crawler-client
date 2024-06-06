@@ -2,7 +2,7 @@
 
 This is a Java-based client application that interacts with a web crawler service to generate sitemaps for websites. The client listens for messages from an ActiveMQ queue and triggers the sitemap generation process.
 
-Sequence Diagram : 
+# Sequence Diagram : 
 
 Client                  WebCrawlerService                  WebCrawler
   |                             |                              |
@@ -35,6 +35,8 @@ Client                  WebCrawlerService                  WebCrawler
   | Close HTTP  Connection      |                              |
   |<-------------------------------                            |
   |                             |                              |
+
+![image](https://github.com/goyalrohit/web-crawler-client/assets/4389889/34370c68-d8a6-435f-b788-e500670e4a72)
 
 ## Prerequisites
 
