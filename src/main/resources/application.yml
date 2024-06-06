@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: web-crawler-client
+
+server:
+  port : 8082
+
+activemq:
+  concurrent:
+    connections: 1-1
+  broker-url: tcp://localhost:61616
+  user: admin
+  password: admin
+  params:
+    trustStorePassword: password
+    keyStorePassword: password
+  destination:
+    subscriber:
+      crawler: crawlertopic
+
+app:
+  crawlerServerUrl: http://localhost:8081/crawl
